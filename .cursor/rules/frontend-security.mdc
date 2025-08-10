@@ -1,0 +1,93 @@
+# Frontend Security Best Practices
+
+## JavaScript Security
+- Never trust client-side validation - always validate on server
+- Use Content Security Policy (CSP) headers
+- Sanitize all user input before processing
+- Avoid using `eval()` and `innerHTML` with user data
+- Use `textContent` instead of `innerHTML` when possible
+- Implement proper CORS policies
+- Use HTTPS for all external requests
+
+## XSS Prevention
+- Use Laravel's Blade `{{ }}` for automatic XSS protection
+- Never output user data without proper escaping
+- Use `{!! !!}` only when you trust the content
+- Implement proper input sanitization
+- Use CSP headers to prevent inline scripts
+- Validate and sanitize all form inputs
+
+## CSRF Protection
+- Always include `@csrf` directive in forms
+- Use Laravel's built-in CSRF protection
+- Include CSRF tokens in AJAX requests
+- Validate CSRF tokens on all POST requests
+- Use proper session management
+
+## Authentication & Authorization
+- Never store sensitive data in localStorage/sessionStorage
+- Use secure cookies with proper flags
+- Implement proper session management
+- Use HTTPS for all authentication requests
+- Implement proper logout functionality
+- Use secure token storage
+
+## API Security
+- Validate all API responses
+- Implement proper error handling
+- Use HTTPS for all API communications
+- Implement rate limiting on client side
+- Use proper authentication headers
+- Validate response data before processing
+
+## Asset Security
+- Use [vite.config.js](mdc:vite.config.js) for secure asset compilation
+- Implement proper asset versioning
+- Use subresource integrity (SRI) for external resources
+- Minify and compress assets for production
+- Use CDN with proper security headers
+- Implement proper cache headers
+
+## Form Security
+- Always validate forms on both client and server
+- Use proper input types and constraints
+- Implement proper error handling
+- Use CAPTCHA for sensitive forms
+- Implement rate limiting on form submissions
+- Use secure file upload validation
+
+## Third-Party Libraries
+- Keep all dependencies updated
+- Use only trusted and well-maintained libraries
+- Audit dependencies for security vulnerabilities
+- Use package managers with security features
+- Implement proper version constraints
+- Monitor security advisories
+
+## Content Security
+- Implement proper Content Security Policy
+- Use HTTPS for all resources
+- Validate all external content
+- Implement proper iframe security
+- Use secure communication protocols
+- Implement proper data validation
+
+## Error Handling
+- Never expose sensitive information in error messages
+- Implement proper error logging
+- Use generic error messages for users
+- Implement proper debugging tools
+- Use proper HTTP status codes
+- Handle errors gracefully
+
+## Performance & Security
+- Implement proper caching strategies
+- Use lazy loading for images and content
+- Implement proper resource loading
+- Use secure communication protocols
+- Implement proper monitoring
+- Use performance optimization techniques
+description:
+globs:
+alwaysApply: false
+---

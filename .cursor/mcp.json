@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "Playwright": {
+      "command": "npx @playwright/mcp@latest",
+      "env": {},
+      "args": []
+    },
+    "GitHub": {
+        "command": "docker run -i --rm -e GITHUB_PERSONAL_ACCESS_TOKEN ghcr.io/github/github-mcp-server",
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+        },
+        "args": []
+      },
+      "Snyk": {
+        "command": "snyk mcp -t stdio --experimental",
+        "env": {},
+        "args": []
+      },
+      "DBHub": {
+      "command": "npx @bytebase/dbhub",
+      "env": {
+        "TRANSPORT": "stdio",
+        "DSN": "postgres://user:password@localhost:5432/dbname?sslmode=disable",
+        "READONLY": "true"
+      },
+      "args": []
+    },
+    "Context7": {
+        "url": "https://mcp.context7.com/mcp",
+        "headers": {}
+      }
+  }
+}

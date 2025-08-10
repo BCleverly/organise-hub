@@ -1,0 +1,109 @@
+# Testing Security Best Practices
+
+## Test Data Security
+- Never use real production data in tests
+- Use [database/factories/](mdc:database/factories/) for test data generation
+- Implement proper data anonymization
+- Use fake data for sensitive information
+- Implement proper test data cleanup
+- Use isolated test databases
+
+## Authentication Testing
+- Test authentication flows thoroughly
+- Test authorization with different user roles
+- Test session management and timeout
+- Test password policies and validation
+- Test account lockout mechanisms
+- Test CSRF protection
+
+## Input Validation Testing
+- Test all input validation scenarios
+- Test edge cases and boundary conditions
+- Test SQL injection prevention
+- Test XSS prevention measures
+- Test file upload security
+- Test rate limiting functionality
+
+## API Security Testing
+- Test API authentication mechanisms
+- Test authorization for API endpoints
+- Test input validation on API requests
+- Test error handling without information disclosure
+- Test rate limiting on API endpoints
+- Test CORS policies
+
+## Database Security Testing
+- Test database connection security
+- Test query injection prevention
+- Test data access controls
+- Test backup and recovery procedures
+- Test data encryption
+- Test audit logging
+
+## Session Security Testing
+- Test session creation and destruction
+- Test session timeout mechanisms
+- Test session hijacking prevention
+- Test secure cookie settings
+- Test session regeneration
+- Test concurrent session handling
+
+## Error Handling Testing
+- Test error messages for information disclosure
+- Test proper error logging
+- Test graceful error handling
+- Test security exception handling
+- Test error page security
+- Test debugging information exposure
+
+## File Upload Testing
+- Test file type validation
+- Test file size limits
+- Test malicious file upload prevention
+- Test file storage security
+- Test file access controls
+- Test virus scanning integration
+
+## Configuration Testing
+- Test environment-specific configurations
+- Test secure default settings
+- Test configuration validation
+- Test sensitive data exposure
+- Test encryption key management
+- Test logging configuration
+
+## Performance Security Testing
+- Test resource exhaustion attacks
+- Test memory leak scenarios
+- Test timeout handling
+- Test concurrent user handling
+- Test load testing security
+- Test stress testing scenarios
+
+## Integration Testing
+- Test third-party service security
+- Test external API security
+- Test payment processing security
+- Test email service security
+- Test file storage service security
+- Test monitoring service security
+
+## Security Regression Testing
+- Test known security vulnerabilities
+- Test security patch effectiveness
+- Test security feature functionality
+- Test security configuration changes
+- Test security dependency updates
+- Test security policy compliance
+
+## Test Environment Security
+- Use isolated test environments
+- Implement proper access controls
+- Use secure test data management
+- Implement proper test cleanup
+- Use secure test configuration
+- Monitor test environment security
+description:
+globs:
+alwaysApply: false
+---

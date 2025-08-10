@@ -1,0 +1,82 @@
+# Laravel Security Best Practices
+
+## Authentication & Authorization
+- Always use Laravel's built-in authentication system with [app/Models/User.php](mdc:app/Models/User.php)
+- Implement proper authorization using Gates and Policies
+- Use middleware for route protection: `auth`, `verified`, `can`, `role`
+- Never store sensitive data in session without encryption
+- Use CSRF protection on all forms with `@csrf` directive
+- Implement rate limiting on authentication endpoints
+
+## Data Validation & Sanitization
+- Always validate user input using Form Request classes or `$request->validate()`
+- Use Laravel's built-in validation rules: `required`, `email`, `unique`, `confirmed`
+- Sanitize output using `{{ }}` for automatic XSS protection
+- Never trust user input - validate on both client and server side
+- Use `strip_tags()` and `htmlspecialchars()` for additional sanitization
+- Implement input length limits to prevent buffer overflow attacks
+
+## Database Security
+- Use Eloquent ORM with parameterized queries to prevent SQL injection
+- Never use raw SQL queries with user input
+- Implement proper database migrations with [database/migrations/](mdc:database/migrations/)
+- Use database transactions for critical operations
+- Implement soft deletes for audit trails
+- Use proper indexing for performance and security
+
+## File Upload Security
+- Validate file types using MIME type checking
+- Implement file size limits
+- Store files outside web root when possible
+- Use Laravel's Storage facade with proper disk configuration
+- Scan uploaded files for malware
+- Generate unique filenames to prevent path traversal
+
+## Environment & Configuration
+- Never commit sensitive data to version control
+- Use environment variables for all sensitive configuration
+- Keep [config/app.php](mdc:config/app.php) secure with proper settings
+- Use strong encryption keys (32+ characters)
+- Implement proper logging without sensitive data exposure
+- Use HTTPS in production with proper SSL configuration
+
+## Session & Cookie Security
+- Use secure session configuration
+- Implement session timeout and regeneration
+- Use secure cookies with `httpOnly` and `secure` flags
+- Implement proper session storage (database/redis over file)
+- Use Laravel's built-in session security features
+
+## API Security
+- Implement proper API authentication (tokens, OAuth)
+- Use API rate limiting
+- Validate all API inputs
+- Implement proper error handling without information disclosure
+- Use HTTPS for all API communications
+- Implement API versioning for security updates
+
+## Error Handling
+- Never expose sensitive information in error messages
+- Use proper logging for debugging
+- Implement custom error pages
+- Handle exceptions gracefully
+- Use Laravel's built-in error handling mechanisms
+
+## Dependencies & Updates
+- Keep Laravel and all packages updated
+- Regularly audit dependencies for security vulnerabilities
+- Use [composer.json](mdc:composer.json) with proper version constraints
+- Implement automated security scanning
+- Monitor security advisories for all packages
+
+## Code Quality & Security
+- Follow PSR-12 coding standards
+- Use Laravel Pint for code formatting
+- Implement proper type hinting and return types
+- Use strict comparison operators (`===`, `!==`)
+- Avoid eval(), exec(), and other dangerous functions
+- Implement proper access control in all methods
+description:
+globs:
+alwaysApply: false
+---

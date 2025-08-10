@@ -1,0 +1,93 @@
+# Database Security Best Practices
+
+## Migration Security
+- Use [database/migrations/](mdc:database/migrations/) for all schema changes
+- Never include sensitive data in migrations
+- Use proper data types and constraints
+- Implement foreign key constraints for referential integrity
+- Use indexes for performance and security
+- Implement proper column constraints
+
+## Model Security
+- Use [app/Models/](mdc:app/Models/) for all Eloquent models
+- Implement proper fillable and guarded arrays
+- Use hidden arrays to protect sensitive data
+- Implement proper relationships with constraints
+- Use accessors and mutators for data transformation
+- Implement proper validation rules
+
+## Data Protection
+- Never store passwords in plain text
+- Use Laravel's built-in password hashing
+- Implement proper encryption for sensitive data
+- Use database-level encryption when available
+- Implement proper data retention policies
+- Use soft deletes for audit trails
+
+## Query Security
+- Always use Eloquent ORM with parameterized queries
+- Never use raw SQL with user input
+- Use proper query scopes for filtering
+- Implement proper pagination
+- Use eager loading to prevent N+1 queries
+- Implement proper query optimization
+
+## Authentication & Authorization
+- Use [app/Models/User.php](mdc:app/Models/User.php) as the base authentication model
+- Implement proper user roles and permissions
+- Use database-level constraints for authorization
+- Implement proper session management
+- Use secure password policies
+- Implement account lockout mechanisms
+
+## Data Validation
+- Implement database-level constraints
+- Use Laravel's validation system
+- Implement proper data type validation
+- Use proper length constraints
+- Implement unique constraints where needed
+- Use check constraints for data integrity
+
+## Backup & Recovery
+- Implement regular database backups
+- Use encrypted backups for sensitive data
+- Test backup and recovery procedures
+- Implement proper backup retention policies
+- Use point-in-time recovery when available
+- Implement disaster recovery procedures
+
+## Performance & Security
+- Use proper indexing strategies
+- Implement query optimization
+- Use database connection pooling
+- Implement proper caching strategies
+- Use read replicas for scaling
+- Monitor database performance
+
+## Access Control
+- Use database user accounts with minimal privileges
+- Implement proper database permissions
+- Use connection encryption (SSL/TLS)
+- Implement proper audit logging
+- Use database firewalls when available
+- Implement proper access monitoring
+
+## Data Privacy
+- Implement data anonymization for testing
+- Use proper data masking techniques
+- Implement GDPR compliance measures
+- Use proper data classification
+- Implement data retention policies
+- Use proper data disposal procedures
+
+## Monitoring & Logging
+- Implement database activity monitoring
+- Use proper error logging
+- Monitor for suspicious activities
+- Implement proper alerting systems
+- Use database performance monitoring
+- Implement proper audit trails
+description:
+globs:
+alwaysApply: false
+---

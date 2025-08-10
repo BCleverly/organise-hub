@@ -1,0 +1,83 @@
+# PHP Coding Standards & Best Practices
+
+## PSR Standards Compliance
+- Follow PSR-12 coding style standards
+- Use PSR-4 autoloading standards
+- Implement PSR-3 logging interface
+- Use PSR-7 HTTP message interface for APIs
+- Follow PSR-11 container interface
+
+## Laravel Conventions
+- Use Laravel's naming conventions for all files and classes
+- Follow Laravel's directory structure and organization
+- Use Laravel's built-in helpers and facades appropriately
+- Implement Laravel's service container for dependency injection
+- Use Laravel's validation and authorization systems
+
+## Code Organization
+- Use proper namespacing following PSR-4
+- Organize classes in appropriate directories
+- Use traits for shared functionality
+- Implement interfaces for contracts
+- Use abstract classes for common implementations
+
+## Type Safety & Modern PHP
+- Use strict typing with `declare(strict_types=1)`
+- Implement proper type hints for all parameters
+- Use return type declarations for all methods
+- Use nullable types when appropriate
+- Use union types for multiple possible types
+- Implement proper PHPDoc blocks with types
+
+## Security Best Practices
+- Never use `eval()`, `exec()`, or `system()` functions
+- Use prepared statements for all database queries
+- Validate and sanitize all user input
+- Use Laravel's built-in CSRF protection
+- Implement proper authentication and authorization
+- Use secure session management
+- Follow OWASP security guidelines
+
+## Error Handling
+- Use try-catch blocks for exception handling
+- Implement proper logging for errors
+- Use Laravel's exception handling system
+- Create custom exception classes when needed
+- Never expose sensitive information in error messages
+- Use proper HTTP status codes
+
+## Performance Optimization
+- Use lazy loading for relationships
+- Implement proper caching strategies
+- Use database query optimization
+- Avoid N+1 query problems
+- Use queue jobs for background processing
+- Implement proper indexing
+
+## Testing
+- Write unit tests for all classes
+- Use PHPUnit for testing framework
+- Implement proper test coverage
+- Use factories for test data
+- Mock external dependencies
+- Test both positive and negative scenarios
+
+## Code Quality
+- Use Laravel Pint for code formatting
+- Implement proper code documentation
+- Use meaningful variable and method names
+- Keep methods small and focused
+- Follow single responsibility principle
+- Use dependency injection for better testability
+
+## Database Practices
+- Use Eloquent ORM for database operations
+- Implement proper relationships
+- Use migrations for schema changes
+- Use seeders for test data
+- Implement proper data validation
+- Use database transactions for critical operations
+description:
+globs:
+alwaysApply: false
+---

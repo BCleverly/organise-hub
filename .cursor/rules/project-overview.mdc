@@ -1,0 +1,71 @@
+# Organise Hub - Laravel Project Overview
+
+## Project Structure
+This is a Laravel 12 application with modern security practices and authentication using passkeys. The project follows Laravel's conventional structure with additional security-focused configurations.
+
+## Key Files & Directories
+
+### Core Application
+- [app/Models/User.php](mdc:app/Models/User.php) - Main user model with passkey authentication and Cashier billing
+- [app/Http/Controllers/](mdc:app/Http/Controllers/) - Application controllers
+- [app/Providers/](mdc:app/Providers/) - Service providers for application configuration
+
+### Configuration
+- [config/app.php](mdc:config/app.php) - Main application configuration
+- [config/auth.php](mdc:config/auth.php) - Authentication configuration
+- [config/database.php](mdc:config/database.php) - Database configuration
+- [config/livewire.php](mdc:config/livewire.php) - Livewire configuration
+
+### Database
+- [database/migrations/](mdc:database/migrations/) - Database schema migrations
+  - User authentication and passkey tables
+  - Subscription and billing tables (Cashier)
+  - Customer management tables
+- [database/factories/](mdc:database/factories/) - Test data factories
+- [database/seeders/](mdc:database/seeders/) - Database seeders
+
+### Frontend & Assets
+- [resources/views/](mdc:resources/views/) - Blade templates
+- [resources/css/](mdc:resources/css/) - Stylesheets
+- [resources/js/](mdc:resources/js/) - JavaScript files
+- [vite.config.js](mdc:vite.config.js) - Vite build configuration
+
+### Dependencies
+- [composer.json](mdc:composer.json) - PHP dependencies including:
+  - Laravel Framework 12
+  - Laravel Cashier for billing
+  - Laravel Octane for performance
+  - Livewire for dynamic interfaces
+  - Spatie Passkeys for modern authentication
+- [package.json](mdc:package.json) - Node.js dependencies
+
+### Testing
+- [tests/](mdc:tests/) - PHPUnit test suite
+- [phpunit.xml](mdc:phpunit.xml) - PHPUnit configuration
+
+## Security Features
+- Passkey authentication (Spatie Laravel Passkeys)
+- Subscription billing (Laravel Cashier)
+- CSRF protection
+- Input validation and sanitization
+- Secure session management
+- Database security with Eloquent ORM
+
+## Development Tools
+- Laravel Pint for code formatting
+- Laravel Sail for Docker development
+- Laravel Pail for log viewing
+- IDE Helper for better development experience
+
+## Key Security Considerations
+- All user input must be validated and sanitized
+- Use Laravel's built-in security features
+- Implement proper authentication and authorization
+- Follow OWASP security guidelines
+- Keep dependencies updated
+- Use HTTPS in production
+- Implement proper error handling without information disclosure
+description:
+globs:
+alwaysApply: false
+---
