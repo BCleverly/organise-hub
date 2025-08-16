@@ -15,7 +15,7 @@ class ForgotPassword extends Component
 
     public bool $emailSent = false;
 
-    public function sendResetLink()
+    public function sendResetLink(): void
     {
         $this->validate();
 
@@ -34,7 +34,7 @@ class ForgotPassword extends Component
         }
     }
 
-    public function render()
+    public function render(): \Illuminate\View\View
     {
         return view('livewire.auth.forgot-password');
     }

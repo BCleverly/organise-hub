@@ -18,6 +18,22 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'password' => bcrypt('password'),
+            'email_verified_at' => now(),
+        ]);
+
+        // Create an admin user for development
+        User::factory()->create([
+            'name' => 'Admin User',
+            'email' => 'admin@example.com',
+            'password' => bcrypt('password'),
+            'email_verified_at' => now(),
+        ]);
+
+        // Seed recipes and tasks for testing
+        $this->call([
+            RecipeSeeder::class,
+            TaskSeeder::class,
         ]);
     }
 }

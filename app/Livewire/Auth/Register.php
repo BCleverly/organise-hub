@@ -22,7 +22,7 @@ class Register extends Component
     #[Rule('required|same:password')]
     public string $password_confirmation = '';
 
-    public function register()
+    public function register(): mixed
     {
         $this->validate();
 
@@ -46,9 +46,11 @@ class Register extends Component
                 }
             }
         }
+
+        return null;
     }
 
-    public function render()
+    public function render(): \Illuminate\View\View
     {
         return view('livewire.auth.register');
     }

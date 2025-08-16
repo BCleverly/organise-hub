@@ -10,6 +10,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.4",
+        "dedoc/scramble": "^0.12.28",
         "laravel/cashier": "^15.7",
         "laravel/framework": "^12.0",
         "laravel/octane": "^2.12",
@@ -17,11 +18,17 @@
         "laravel/tinker": "^2.10.1",
         "livewire/livewire": "^3.6",
         "lorisleiva/laravel-actions": "^2.9",
-        "spatie/laravel-passkeys": "^1.0"
+        "qirolab/laravel-reactions": "^3.1",
+        "spatie/laravel-passkeys": "^1.0",
+        "spatie/laravel-permission": "^6.21",
+        "spatie/laravel-personal-data-export": "^4.3",
+        "spatie/laravel-tags": "^4.10"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.6",
         "fakerphp/faker": "^1.23",
+        "larastan/larastan": "^3.0",
+        "laravel/boost": "^1.0",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.41",

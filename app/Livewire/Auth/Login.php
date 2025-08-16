@@ -18,7 +18,7 @@ class Login extends Component
 
     public bool $remember = false;
 
-    public function login()
+    public function login(): mixed
     {
         $this->validate();
 
@@ -39,9 +39,35 @@ class Login extends Component
                 }
             }
         }
+
+        return null;
     }
 
-    public function render()
+    public function quickLogin(string $email): mixed
+    {
+        // Only allow in development environment
+        if (! app()->environment('local', 'development', 'testing')) {
+            abort(403, 'Quick login is only available in development.');
+        }
+
+        try {
+            $user = LoginUser::run([
+                'email' => $email,
+                'password' => 'password', // Default password for test accounts
+                'remember' => false,
+            ]);
+
+            session()->regenerate();
+
+            return redirect()->route('dashboard');
+        } catch (\Exception $e) {
+            $this->addError('email', 'Quick login failed. Please use the regular login form.');
+        }
+
+        return null;
+    }
+
+    public function render(): \Illuminate\View\View
     {
         return view('livewire.auth.login');
     }

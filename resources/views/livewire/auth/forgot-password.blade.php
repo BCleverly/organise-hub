@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="text-center">
-                    <a href="{{ route('login') }}" class="font-medium text-indigo-600 hover:text-indigo-500">
+                    <a href="{{ route('login') }}" wire:navigate.hover class="font-medium text-indigo-600 hover:text-indigo-500">
                         Back to login
                     </a>
                 </div>

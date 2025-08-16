@@ -11,6 +11,9 @@ class SendPasswordResetLink
 {
     use AsAction;
 
+    /**
+     * @param  array<string, mixed>  $data
+     */
     public function handle(array $data): string
     {
         $validated = Validator::make($data, [

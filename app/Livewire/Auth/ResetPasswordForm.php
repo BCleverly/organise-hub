@@ -23,12 +23,12 @@ class ResetPasswordForm extends Component
 
     public bool $passwordReset = false;
 
-    public function mount($token)
+    public function mount(string $token): void
     {
         $this->token = $token;
     }
 
-    public function resetPassword()
+    public function resetPassword(): void
     {
         $this->validate();
 
@@ -50,7 +50,7 @@ class ResetPasswordForm extends Component
         }
     }
 
-    public function render()
+    public function render(): \Illuminate\View\View
     {
         return view('livewire.auth.reset-password');
     }

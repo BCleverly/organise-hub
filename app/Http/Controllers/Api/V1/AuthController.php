@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Actions\Auth\LoginUser;
-use App\Actions\Auth\LogoutUser;
 use App\Actions\Auth\RegisterUser;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
@@ -57,9 +56,10 @@ class AuthController extends Controller
 
     public function logout(Request $request): JsonResponse
     {
-        LogoutUser::run();
-
-        $request->user()->currentAccessToken()->delete();
+        $token = $request->user()->currentAccessToken();
+        if ($token) {
+            $token->delete();
+        }
 
         return response()->json([
             'message' => 'Logged out successfully',

@@ -2,6 +2,51 @@
 
 This plan details the steps to build your initial Minimum Viable Product (MVP) for OrganizeHub, a platform that combines core functionalities from task management, recipe organization, and habit tracking for individuals and small groups. This version leverages a **Laravel Livewire frontend** for rapid web development, a **PHP (Laravel) backend** running on **FrankenPHP** with **Laravel Octane** for high performance, and a **relational database (e.g., PostgreSQL/MySQL/MariaDB)**. A key focus is on structuring reusable business logic via **Laravel Actions** to serve both Livewire components and future API endpoints.
 
+### **Quick Start - Development Users**
+
+The application comes with pre-seeded users for development and testing:
+
+**To create test users:**
+```bash
+php artisan db:seed
+```
+
+**To view login credentials:**
+```bash
+php artisan auth:credentials
+```
+
+**Default test users:**
+- **Test User**: `test@example.com` / `password`
+- **Admin User**: `admin@example.com` / `password`
+
+You can log in at: `http://your-app.test/login`
+
+### **Passkey Authentication**
+
+The application includes **Spatie Laravel Passkeys** for modern, secure authentication:
+
+**Features:**
+- ✅ **Passkey Login**: Users can sign in using passkeys (biometric, PIN, or security key)
+- ✅ **Email/Password Fallback**: Traditional email/password authentication still available
+- ✅ **Modern Security**: Uses WebAuthn standard for phishing-resistant authentication
+
+**How it works:**
+1. Users register with email/password first
+2. After login, they can add passkeys to their account (future feature)
+3. On subsequent logins, they can use either passkeys or email/password
+
+**Current Implementation:**
+- Passkey authentication component is integrated into the login page
+- Users see both "Sign in with Passkey" and "Sign in with Email" options
+- Passkey registration will be added as a user account feature
+
+**Browser Support:**
+- Chrome 67+
+- Firefox 60+
+- Safari 13+
+- Edge 18+
+
 ### **Phase 1: Define Your Vision & MVP Scope (Pre-Development)**
 
 This crucial phase ensures you're building the *right* product for the *right* audience.

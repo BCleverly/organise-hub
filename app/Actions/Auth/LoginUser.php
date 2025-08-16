@@ -12,6 +12,9 @@ class LoginUser
 {
     use AsAction;
 
+    /**
+     * @param  array<string, mixed>  $data
+     */
     public function handle(array $data): User
     {
         $validated = Validator::make($data, [

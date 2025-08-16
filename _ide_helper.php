@@ -17820,6 +17820,16 @@ namespace Illuminate\Support\Facades {
             return \Illuminate\Routing\Router::passkeys($prefix);
         }
 
+        /**
+         * @see \Spatie\PersonalDataExport\PersonalDataExportServiceProvider::packageBooted()
+         * @param string $url
+         * @static
+         */
+        public static function personalDataExports($url)
+        {
+            return \Illuminate\Routing\Router::personalDataExports($url);
+        }
+
             }
     /**
      * @method static \Illuminate\Console\Scheduling\PendingEventAttributes withoutOverlapping(int $expiresAt = 1440)
@@ -22907,6 +22917,65 @@ namespace Illuminate\Support\Facades {
             }
     }
 
+namespace Laravel\Mcp\Server\Facades {
+    /**
+     * @see \Laravel\Mcp\Server\Registrar
+     */
+    class Mcp {
+        /**
+         * Register an web-based MCP server running over HTTP.
+         *
+         * @static
+         */
+        public static function web($handle, $serverClass)
+        {
+            /** @var \Laravel\Mcp\Server\Registrar $instance */
+            return $instance->web($handle, $serverClass);
+        }
+
+        /**
+         * Register a local MCP server running over STDIO.
+         *
+         * @static
+         */
+        public static function local($handle, $serverClass)
+        {
+            /** @var \Laravel\Mcp\Server\Registrar $instance */
+            return $instance->local($handle, $serverClass);
+        }
+
+        /**
+         * Get the server class for a local MCP.
+         *
+         * @static
+         */
+        public static function getLocalServer($handle)
+        {
+            /** @var \Laravel\Mcp\Server\Registrar $instance */
+            return $instance->getLocalServer($handle);
+        }
+
+        /**
+         * @static
+         */
+        public static function getWebServer($handle)
+        {
+            /** @var \Laravel\Mcp\Server\Registrar $instance */
+            return $instance->getWebServer($handle);
+        }
+
+        /**
+         * @static
+         */
+        public static function oauthRoutes($oauthPrefix = 'oauth')
+        {
+            /** @var \Laravel\Mcp\Server\Registrar $instance */
+            return $instance->oauthRoutes($oauthPrefix);
+        }
+
+            }
+    }
+
 namespace Laravel\Octane\Facades {
     /**
      * @see \Laravel\Octane\Octane
@@ -23799,6 +23868,16 @@ namespace Illuminate\Routing {
             return \Illuminate\Routing\Router::passkeys($prefix);
         }
 
+        /**
+         * @see \Spatie\PersonalDataExport\PersonalDataExportServiceProvider::packageBooted()
+         * @param string $url
+         * @static
+         */
+        public static function personalDataExports($url)
+        {
+            return \Illuminate\Routing\Router::personalDataExports($url);
+        }
+
             }
     /**
      */
@@ -23811,6 +23890,46 @@ namespace Illuminate\Routing {
         public static function lazy($enabled = true)
         {
             return \Illuminate\Routing\Route::lazy($enabled);
+        }
+
+        /**
+         * @see \Spatie\Permission\PermissionServiceProvider::registerMacroHelpers()
+         * @param mixed $roles
+         * @static
+         */
+        public static function role($roles = [])
+        {
+            return \Illuminate\Routing\Route::role($roles);
+        }
+
+        /**
+         * @see \Spatie\Permission\PermissionServiceProvider::registerMacroHelpers()
+         * @param mixed $permissions
+         * @static
+         */
+        public static function permission($permissions = [])
+        {
+            return \Illuminate\Routing\Route::permission($permissions);
+        }
+
+            }
+    }
+
+namespace Illuminate\Database\Eloquent\Factories {
+    /**
+     * @template TModel of \Illuminate\Database\Eloquent\Model
+     * @method $this trashed()
+     */
+    class Factory {
+        /**
+         * @see \Spatie\Translatable\TranslatableServiceProvider::packageRegistered()
+         * @param array|string $locales
+         * @param mixed|null $value
+         * @static
+         */
+        public static function translations($locales, $value)
+        {
+            return \Illuminate\Database\Eloquent\Factories\Factory::translations($locales, $value);
         }
 
             }
@@ -28769,6 +28888,7 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
     class View extends \Illuminate\Support\Facades\View {}
     class Vite extends \Illuminate\Support\Facades\Vite {}
+    class Mcp extends \Laravel\Mcp\Server\Facades\Mcp {}
     class Octane extends \Laravel\Octane\Facades\Octane {}
     class Livewire extends \Livewire\Livewire {}
     class Action extends \Lorisleiva\Actions\Facades\Actions {}
