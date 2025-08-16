@@ -74,6 +74,19 @@ class Habits extends Component
         $this->injectUserPreferences();
     }
 
+    public function clearFlashMessage(): void
+    {
+        session()->forget('message');
+    }
+
+    public function updated($propertyName): void
+    {
+        // Clear flash message when component is updated (e.g., after filtering, searching)
+        if (in_array($propertyName, ['search', 'typeFilter', 'showCompleted'])) {
+            session()->forget('message');
+        }
+    }
+
     public function render(): \Illuminate\View\View
     {
         $query = Trackable::query()
