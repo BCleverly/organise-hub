@@ -9,7 +9,7 @@ return [
 
     /*
      * These class are responsible for performing core tasks regarding passkeys.
-     * You can customize them by creating a class that extends the default, and
+     * You can customise them by creating a class that extends the default, and
      * by specifying your custom class name here.
      */
     'actions' => [

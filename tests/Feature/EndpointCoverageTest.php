@@ -72,7 +72,7 @@ test('recipes page can be accessed by authenticated users', function () {
 
     $response->assertStatus(200);
     $response->assertSee('Recipe Book');
-    $response->assertSee('Discover and organize your favorite recipes');
+    $response->assertSee('Discover and organise your favourite recipes');
 });
 
 test('create recipe page can be accessed by authenticated users', function () {

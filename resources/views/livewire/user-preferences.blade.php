@@ -2,7 +2,7 @@
     <div class="bg-white shadow-sm rounded-lg">
         <div class="px-6 py-4 border-b border-gray-200">
             <h2 class="text-lg font-semibold text-gray-900">User Preferences</h2>
-            <p class="text-sm text-gray-600 mt-1">Customize your experience and interface settings</p>
+            <p class="text-sm text-gray-600 mt-1">Customise your experience and interface settings</p>
         </div>
 
         <div class="p-6 space-y-6">

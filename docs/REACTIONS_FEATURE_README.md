@@ -6,7 +6,7 @@ This document describes the implementation of the reactions/likes feature for re
 
 The reactions feature allows users to like recipes, helping to gauge popularity and quality. Users can:
 - Like/unlike public recipes
-- View recipes they've liked in a dedicated "Favorites" section
+- View recipes they've liked in a dedicated "Favourites" section
 - See like counts on recipe cards and detail pages
 
 ## Implementation Details
@@ -52,13 +52,13 @@ The package creates a `reactions` table that stores:
 #### Recipe List Page (`app/Livewire/Recipes.php`)
 
 **Features:**
-- "Favorites" tab in view mode toggle
+- "Favourites" tab in view mode toggle
 - Like buttons on recipe cards
-- Favorites filter functionality
+- Favourites filter functionality
 
 **Methods:**
 - `toggleLike($recipeId)` - Handles like/unlike from recipe cards
-- Updated `recipes()` method to support favorites filtering
+- Updated `recipes()` method to support favourites filtering
 
 ### View Modes
 
@@ -66,7 +66,7 @@ The recipes page now supports three view modes:
 
 1. **My Recipes** - User's own recipes
 2. **Discover** - Public recipes from all users
-3. **Favorites** - Recipes the user has liked (only visible when logged in)
+3. **Favourites** - Recipes the user has liked (only visible when logged in)
 
 ### Flash Messages
 
@@ -130,7 +130,7 @@ Potential improvements could include:
 
 The feature has been tested with:
 - Like/unlike functionality
-- Favorites filtering
+- Favourites filtering
 - User authentication checks
 - Database persistence
 - UI state updates

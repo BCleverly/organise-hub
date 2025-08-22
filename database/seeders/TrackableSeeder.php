@@ -181,7 +181,7 @@ class TrackableSeeder extends Seeder
             'user_id' => $user->id,
             'type' => 'SKILL',
             'title' => 'Learn Guitar',
-            'description' => 'Master the guitar and play favorite songs',
+            'description' => 'Master the guitar and play favourite songs',
             'goal_metric' => 'checkbox',
             'progress_percentage' => 25,
             'target_completion_date' => now()->addMonths(12),
@@ -267,10 +267,10 @@ class TrackableSeeder extends Seeder
     private function addCompletionHistory(Trackable $trackable, int $days): void
     {
         $startDate = now()->subDays($days);
-        
+
         for ($i = 0; $i < $days; $i++) {
             $date = $startDate->copy()->addDays($i);
-            
+
             // 70% chance of completion on any given day
             if (rand(1, 100) <= 70) {
                 $completionData = [

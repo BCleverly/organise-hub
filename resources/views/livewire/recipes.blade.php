@@ -5,8 +5,8 @@
             <h1 class="text-2xl lg:text-3xl font-bold text-gray-900">Recipe Book</h1>
             <p class="text-sm lg:text-base text-gray-600 mt-1">
                 @if($viewMode === 'my')
-                    Discover and organize your favorite recipes.
-                @elseif($viewMode === 'favorites')
+                    Discover and organise your favourite recipes.
+                @elseif($viewMode === 'favourites')
                     Your liked recipes from the community.
                 @else
                     Get inspired by recipes shared by our community.
@@ -42,10 +42,10 @@
             </button>
             @if(auth()->check())
                 <button 
-                    wire:click="$set('viewMode', 'favorites')" 
-                    class="px-4 py-2 rounded-md text-sm font-medium transition-colors {{ $viewMode === 'favorites' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900' }}"
+                    wire:click="$set('viewMode', 'favourites')" 
+                    class="px-4 py-2 rounded-md text-sm font-medium transition-colors {{ $viewMode === 'favourites' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-900' }}"
                 >
-                    Favorites
+                    Favourites
                 </button>
             @endif
         </div>
@@ -232,8 +232,8 @@
                 <h3 class="text-lg font-medium text-gray-900 mb-2">
                     @if($viewMode === 'my')
                         No recipes found
-                    @elseif($viewMode === 'favorites')
-                        No favorite recipes found
+                    @elseif($viewMode === 'favourites')
+                        No favourite recipes found
                     @else
                         No public recipes found
                     @endif
@@ -241,7 +241,7 @@
                 <p class="text-gray-500 mb-4">
                     @if($viewMode === 'my')
                         Start by creating your first recipe!
-                    @elseif($viewMode === 'favorites')
+                    @elseif($viewMode === 'favourites')
                         Like some recipes to see them here!
                     @else
                         Try adjusting your search or filters.
@@ -251,7 +251,7 @@
                     <button wire:click="addRecipe" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                         Create Recipe
                     </button>
-                @elseif($viewMode === 'favorites')
+                @elseif($viewMode === 'favourites')
                     <button wire:click="$set('viewMode', 'discover')" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                         Discover Recipes
                     </button>

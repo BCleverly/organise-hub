@@ -34,15 +34,15 @@ php artisan seed:recipes --fresh
 The seeder creates 4 test users with different specialties:
 
 1. **Chef Sarah** (sarah@example.com)
-   - Specializes in desserts and breakfast
+   - Specialises in desserts and breakfast
    - Recipes: Chocolate Chip Cookies, Blueberry Pancakes, Tiramisu
 
 2. **Chef Michael** (michael@example.com)
-   - Specializes in main courses
+   - Specialises in main courses
    - Recipes: Grilled Salmon, Beef Stir Fry, Homemade Pizza
 
 3. **Chef Emma** (emma@example.com)
-   - Specializes in appetizers and snacks
+   - Specialises in appetizers and snacks
    - Recipes: Guacamole, Bruschetta, Energy Balls
 
 4. **Chef David** (david@example.com)
@@ -85,7 +85,7 @@ Each recipe includes:
 ### Ingredient System
 
 The new ingredient system provides:
-- **Ingredient Database**: Centralized ingredient storage with categories
+- **Ingredient Database**: Centralised ingredient storage with categories
 - **Quantity & Units**: Precise measurements (cups, grams, tablespoons, etc.)
 - **Notes**: Additional instructions (e.g., "softened", "finely chopped")
 - **Categories**: dairy, produce, pantry, meat, spices

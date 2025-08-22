@@ -86,7 +86,7 @@ Tasks are tagged with relevant categories:
 - **due_date**: Optional due date
 - **completed_at**: Completion timestamp (for completed tasks)
 - **user_id**: Associated user
-- **tags**: Categorized tags for filtering
+- **tags**: Categorised tags for filtering
 
 ## Testing
 

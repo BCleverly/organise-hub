@@ -153,7 +153,7 @@ class RecipeSeeder extends Seeder
                             'estimated_time' => 3,
                         ],
                         [
-                            'instruction' => 'Make a well in the center and pour in milk, egg, and melted butter',
+                            'instruction' => 'Make a well in the centre and pour in milk, egg, and melted butter',
                             'step_type' => 'prep',
                             'estimated_time' => 2,
                         ],

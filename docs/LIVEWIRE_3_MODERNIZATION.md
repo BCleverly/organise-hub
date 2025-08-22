@@ -8,7 +8,7 @@ The Recipe Livewire components have been successfully modernized to use the late
 
 - **Livewire Form Objects** - Following the official [Livewire Forms documentation](https://livewire.laravel.com/docs/forms)
 - **Property Attributes** - Using `#[Validate]`, `#[Rule]`, `#[Layout]`, `#[Url]`, `#[Locked]`, `#[Computed]`
-- **Form Request Validation** - Centralized validation logic
+- **Form Request Validation** - Centralised validation logic
 - **Component Communication** - Modern event handling
 - **Performance Optimization** - Computed properties and lazy loading
 
@@ -176,7 +176,7 @@ All templates now use the form object pattern:
 
 **Status: ✅ COMPLETED**
 
-Created `app/Http/Requests/RecipeRequest.php` for centralized validation:
+Created `app/Http/Requests/RecipeRequest.php` for centralised validation:
 ```php
 class RecipeRequest extends FormRequest
 {
@@ -265,7 +265,7 @@ public string $viewMode = 'grid';
 | Property Attributes | ✅ | `#[Validate]`, `#[Rule]`, `#[Layout]`, `#[Url]` |
 | Computed Properties | ✅ | `#[Computed]` for performance optimization |
 | Locked Properties | ✅ | `#[Locked]` for security |
-| Form Request Validation | ✅ | Centralized `RecipeRequest` class |
+| Form Request Validation | ✅ | Centralised `RecipeRequest` class |
 | Component Communication | ✅ | Modern event handling with `dispatch()` |
 | Single Responsibility | ✅ | Separated form logic into dedicated class |
 | Type Safety | ✅ | Strong typing throughout components |
@@ -280,7 +280,7 @@ public string $viewMode = 'grid';
 
 ### 2. Code Organization
 - Separated form logic from component logic
-- Centralized validation rules
+- Centralised validation rules
 - Reusable form methods
 
 ### 3. Security Enhancements
@@ -297,7 +297,7 @@ public string $viewMode = 'grid';
 
 - [x] **Form Objects**: Implemented `RecipeForm` class
 - [x] **Property Attributes**: Applied `#[Validate]`, `#[Rule]`, `#[Layout]`, `#[Url]`, `#[Locked]`, `#[Computed]`
-- [x] **Validation**: Centralized with `RecipeRequest`
+- [x] **Validation**: Centralised with `RecipeRequest`
 - [x] **Templates**: Updated to use form object pattern
 - [x] **Security**: Added locked properties and authorization
 - [x] **Performance**: Implemented computed properties
@@ -325,7 +325,7 @@ The Recipe Livewire components have been successfully modernized to use the late
 - **Enhanced Security**: Locked properties and proper validation
 - **Improved Performance**: Computed properties and lazy loading
 - **Better User Experience**: Real-time validation and optimistic updates
-- **Maintainability**: Centralized validation and reusable components
+- **Maintainability**: Centralised validation and reusable components
 
 The browser testing confirms that all functionality works correctly, and the implementation aligns with both official Livewire documentation and community best practices.
 

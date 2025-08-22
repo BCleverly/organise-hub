@@ -1,6 +1,6 @@
 ## **OrganizeHub: Comprehensive MVP Development & Validation Plan (Laravel Livewire & API)**
 
-This plan details the steps to build your initial Minimum Viable Product (MVP) for OrganizeHub, a platform that combines core functionalities from task management, recipe organization, and habit tracking for individuals and small groups. This version leverages a **Laravel Livewire frontend** for rapid web development, a **PHP (Laravel) backend** running on **FrankenPHP** with **Laravel Octane** for high performance, and a **relational database (e.g., PostgreSQL/MySQL/MariaDB)**. A key focus is on structuring reusable business logic via **Laravel Actions** to serve both Livewire components and future API endpoints.
+This plan details the steps to build your initial Minimum Viable Product (MVP) for OrganiseHub, a platform that combines core functionalities from task management, recipe organisation, and habit tracking for individuals and small groups. This version leverages a **Laravel Livewire frontend** for rapid web development, a **PHP (Laravel) backend** running on **FrankenPHP** with **Laravel Octane** for high performance, and a **relational database (e.g., PostgreSQL/MySQL/MariaDB)**. A key focus is on structuring reusable business logic via **Laravel Actions** to serve both Livewire components and future API endpoints.
 
 ### **Quick Start - Development Users**
 
@@ -52,14 +52,14 @@ The application includes **Spatie Laravel Passkeys** for modern, secure authenti
 This crucial phase ensures you're building the *right* product for the *right* audience.
 
 1. **Unifying the Ideas: The Core Problem**  
-   * **Problem:** Individuals and small groups often use disparate tools for managing tasks, tracking habits, and organizing personal information like recipes, leading to fragmentation, context-switching, and missed opportunities.  
-   * **Solution:** A single, intuitive platform that acts as a central hub, reducing friction and enhancing overall organization and productivity.  
-   * **Value Proposition:** "OrganizeHub simplifies your digital life by centralizing your tasks, personal recipes, and habit tracking in one intuitive, easy-to-use platform."  
+   * **Problem:** Individuals and small groups often use disparate tools for managing tasks, tracking habits, and organising personal information like recipes, leading to fragmentation, context-switching, and missed opportunities.  
+        * **Solution:** A single, intuitive platform that acts as a central hub, reducing friction and enhancing overall organisation and productivity.  
+   * **Value Proposition:** "OrganiseHub simplifies your digital life by centralising your tasks, personal recipes, and habit tracking in one intuitive, easy-to-use platform."  
 2. **Target Audience:**  
    * **Primary:** Individuals and small groups (e.g., families, roommates, small hobby clubs, freelance collaborators) seeking a simple, affordable solution to manage daily activities, personal goals, and household/shared content.  
    * **Secondary:** Those overwhelmed by feature-rich, expensive enterprise tools.  
 3. **Initial MVP Focus:**  
-   * To start lean and validate quickly, the MVP will primarily focus on **Task Management** and **Recipe Organization** for the web application.  
+   * To start lean and validate quickly, the MVP will primarily focus on **Task Management** and **Recipe Organisation** for the web application.  
    * **Habit Tracking** will be planned as a clear **Version 2 (V2) module**, built upon the flexible data architecture established in the MVP. This allows for focused development and faster market entry.
 
 ### **Phase 2: Design & Planning (Before Coding)**
@@ -75,7 +75,7 @@ Visualizing and structuring your product will save significant development time.
    * Sketch out the key screens: Login/Sign Up, Main Dashboard (with links to modules), Task List, Add/Edit Task Form, Recipe List, Add/Edit Recipe Form.  
    * Focus on layout, primary actions, and information hierarchy.  
    * *Tools:* Pen & Paper, Figma (for digital collaboration), Miro.  
-3. **UI Layout / Site Map for Clear UX** To avoid confusion and ensure a clear, easy-to-use experience, OrganizeHub will follow a modular UI layout with distinct areas for each core function.  
+3. **UI Layout / Site Map for Clear UX** To avoid confusion and ensure a clear, easy-to-use experience, OrganiseHub will follow a modular UI layout with distinct areas for each core function.  
    * **Landing Page (/):**  
      * Publicly accessible.  
      * Highlights value proposition, key features (Tasks, Recipes), pricing.  

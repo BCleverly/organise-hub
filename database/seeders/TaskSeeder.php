@@ -91,7 +91,7 @@ class TaskSeeder extends Seeder
                 ],
                 [
                     'title' => 'Plan team training session',
-                    'description' => 'Organize training session for new team members on system procedures.',
+                    'description' => 'Organise training session for new team members on system procedures.',
                     'status' => 'todo',
                     'priority' => 'medium',
                     'due_date' => now()->addDays(10),
@@ -126,8 +126,8 @@ class TaskSeeder extends Seeder
                     'tags' => ['cooking', 'baking', 'recipe-testing'],
                 ],
                 [
-                    'title' => 'Organize kitchen pantry',
-                    'description' => 'Sort and organize pantry items by category and expiration date.',
+                    'title' => 'Organise kitchen pantry',
+                    'description' => 'Sort and organise pantry items by category and expiration date.',
                     'status' => 'todo',
                     'priority' => 'low',
                     'due_date' => now()->addDays(5),
@@ -241,8 +241,8 @@ class TaskSeeder extends Seeder
                     'tags' => ['cooking', 'photography', 'learning'],
                 ],
                 [
-                    'title' => 'Organize recipe collection',
-                    'description' => 'Sort and categorize personal recipe collection.',
+                    'title' => 'Organise recipe collection',
+                    'description' => 'Sort and categorise personal recipe collection.',
                     'status' => 'todo',
                     'priority' => 'low',
                     'due_date' => now()->addDays(10),

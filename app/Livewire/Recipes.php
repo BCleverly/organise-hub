@@ -25,7 +25,7 @@ class Recipes extends Component
     public string $difficultyFilter = '';
 
     #[Url]
-    public string $viewMode = 'my'; // 'my', 'discover', or 'favorites'
+    public string $viewMode = 'my'; // 'my', 'discover', or 'favourites'
 
     /** @var array<string, string> */
     protected $listeners = [
@@ -54,7 +54,7 @@ class Recipes extends Component
         // Filter by view mode
         if ($this->viewMode === 'my') {
             $query->forUser((int) (auth()->id() ?? 0));
-        } elseif ($this->viewMode === 'favorites') {
+        } elseif ($this->viewMode === 'favourites') {
             if (! auth()->check()) {
                 return collect()->paginate(12);
             }
