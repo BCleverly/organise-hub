@@ -150,8 +150,6 @@ class Recipes extends Component
 
     public function render(): \Illuminate\View\View
     {
-        $this->injectUserPreferences();
-
         return view('livewire.recipes', [
             'recipes' => $this->recipes(),
             'categories' => $this->categories(),

@@ -16,7 +16,7 @@ test('dashboard shows welcome message', function () {
 
     Livewire::actingAs($user)
         ->test(Dashboard::class)
-        ->assertSee('Welcome to OrganizeHub!');
+        ->assertSee('Welcome to OrganiseHub!');
 });
 
 test('dashboard shows todays focus section', function () {

@@ -8,7 +8,7 @@ test('dashboard can be accessed by authenticated users', function () {
     $response = $this->actingAs($user)->get('/dashboard');
 
     $response->assertStatus(200);
-    $response->assertSee('Welcome to OrganizeHub!');
+    $response->assertSee('Welcome to OrganiseHub!');
     $response->assertSee('Today\'s Focus', false);
     $response->assertSee('Quick Actions');
     $response->assertSee('Add Task');

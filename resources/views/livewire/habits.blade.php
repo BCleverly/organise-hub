@@ -13,7 +13,7 @@
                     wire:model.live.debounce.300ms="search"
                     type="text" 
                     placeholder="Search trackables..." 
-                    class="w-64 pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                    class="w-64 pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm focus:outline-hidden focus:bg-white dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:focus:bg-neutral-800 dark:focus:border-neutral-600"
                 >
                 <div class="absolute inset-y-0 right-0 flex items-center pr-3">
                     <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,8 +62,11 @@
             <!-- Add New Trackable Button -->
             <a 
                 href="{{ route('habits.create') }}"
-                class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+                class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text-start bg-gray-800 border border-gray-800 text-white text-sm font-medium rounded-lg shadow-2xs align-middle hover:bg-gray-950 focus:outline-hidden focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-200 dark:focus:bg-neutral-200"
             >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                </svg>
                 Add Trackable
             </a>
         </div>
